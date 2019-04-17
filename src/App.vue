@@ -15,6 +15,7 @@
 
 <script>
 import Scoreboard from './components/Scoreboard'
+
 import PointRegistration from './components/PointRegistration'
 
 
