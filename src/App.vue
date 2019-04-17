@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-toolbar app>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>Cardscore</span>
+        <span class="font-weight-light">counter</span>
+      </v-toolbar-title>
+    </v-toolbar>
+    <v-content>
+      <Scoreboard/>
+      <PointRegistration ></PointRegistration>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Scoreboard from './components/Scoreboard'
+import PointRegistration from './components/PointRegistration'
+
+
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
+    Scoreboard,
+    PointRegistration
+  },
+  data () {
+    return {
+      //
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
